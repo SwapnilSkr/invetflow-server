@@ -4,3 +4,52 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+# Async runtime
+tokio = { version = "1.50", features = ["full"] }
+futures = "0.3"
+
+# Web framework
+axum = { version = "0.8", features = ["macros"] }
+tower = "0.5"
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+mongodb = "3.5"
+bson = { version = "2.13", features = ["chrono-0_4"] }
+
+# Time/UUID
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.11", features = ["v4", "serde"] }
+
+# Error handling
+thiserror = "2.0"
+anyhow = "1.0"
+
+# Authentication
+jsonwebtoken = "9.3"
+
+# HTTP client for external APIs
+reqwest = { version = "0.12", features = ["json", "rustls-tls", "multipart"] }
+
+# Async trait support
+async-trait = "0.1"
+
+# Configuration
+dotenvy = "0.15"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# TypeScript export for frontend
+ts-rs = { version = "10", features = ["chrono", "uuid", "serde-compat"] }
+
+# Validation
+validator = { version = "0.18", features = ["derive"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
