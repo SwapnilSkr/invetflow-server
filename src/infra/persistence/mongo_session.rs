@@ -5,7 +5,7 @@ use async_trait::async_trait;
 use mongodb::bson::doc;
 use mongodb::{Client, Collection};
 
-const SESSIONS_COLLECTION: &str = "session";
+const SESSIONS_COLLECTION: &str = "sessions";
 
 pub struct MongoSessionRepository {
     collection: Collection<bson::Document>,

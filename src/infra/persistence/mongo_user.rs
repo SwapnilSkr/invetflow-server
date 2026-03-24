@@ -6,7 +6,7 @@ use mongodb::bson::doc;
 use mongodb::{Client, Collection};
 use uuid::Uuid;
 
-const USERS_COLLECTION: &str = "user";
+const USERS_COLLECTION: &str = "users";
 
 pub struct MongoUserRepository {
     collection: Collection<bson::Document>,
